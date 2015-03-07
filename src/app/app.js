@@ -16,26 +16,14 @@ angular.module('hack4sweden', [
 
     $logProvider.debugEnabled(true);
 
-    // $routeProvider
-    //   .when('/', {
-    //     templateUrl: 'templates/Start.html',
-    //     controller: 'StartCtrl'
-    //   })
-    //   .when('/OfferToGive/:UnitOfferID', {
-    //     templateUrl: 'templates/OfferToGiveDetails.html',
-    //     controller: 'OfferToGiveDetailsCtrl'
-    //   })
-    //   .when('/GivenOffer/:GivenOfferID', {
-    //     templateUrl: 'templates/GivenOfferDetails.html',
-    //     controller: 'GivenOfferDetailsCtrl'
-    //   })
-    //   .when('/ChoosePatient', {
-    //     templateUrl: 'templates/choosePatient.html',
-    //     controller: 'ChoosePatientCtrl'
-    //   })
-    //   .otherwise({
-    //     redirectTo: '/'
-    //   });
+    $routeProvider
+      .when('/', {
+        templateUrl: 'templates/Start.html',
+        controller: 'StartCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
 
     /*    $locationProvider.html5Mode(true);
      $locationProvider.hashPrefix('!'); */
