@@ -1,0 +1,6 @@
+{
+  "translationModules": ["chorus.translations", "mvk-portal.translations"],
+  "enablePatient": true,
+  "requirePatientLoaded": true,
+  "useMockData": false
+}

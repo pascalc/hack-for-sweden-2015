@@ -1,0 +1,3 @@
+[submodule "git_modules/ng-commons"]
+	path = git_modules/ng-commons
+	url = git@bitbucket.org:chorusab/ng-commons.git

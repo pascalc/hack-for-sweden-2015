@@ -1,0 +1,5 @@
+#git_modules/vpv-framework/dist/assets/vpv-framework-0.0.0.js
+#git_modules/chorus-commons/dist/assets/chorus-commons-0.0.0.js
+git_modules/**/*.js
+src/app/plugins/*.js
+Gruntfile.js

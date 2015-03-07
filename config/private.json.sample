@@ -1,0 +1,14 @@
+{
+    "proxies": [
+       {
+            "context": "/foo",
+            "host": "foo.bar.com",
+            "port": 443,
+            "https": true,
+            "changeOrigin": true,
+            "rewrite": {
+                "^/foo": "/foo"
+            }
+       }
+    ]   
+}
