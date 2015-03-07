@@ -1,13 +1,81 @@
 /* global _ */
 
-angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScope, $log) {
-  $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-  $scope.series = ['Series A', 'Series B'];
+angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScope, $log, $http, $timeout) {
+  $rootScope.showLoading(true);
+  $http.post("http://localhost:9000/proxy?target=http://api.scb.se/OV0104/v1/doris/sv/ssd/START/AA/AA0003/AA0003B/IntGr1RikKON",
+    {
+      "query": [
+        {
+          "code": "Kon",
+          "selection": {
+            "filter": "item",
+            "values": [
+              "1+2"
+            ]
+          }
+        },
+        {
+          "code": "Bakgrund",
+          "selection": {
+            "filter": "vs:IntegrationBakgrundFödelseland",
+            "values": [
+              "TOT",
+              "SE",
+              "NEXS",
+              "EUEESXN",
+              "VXEUEES"
+            ]
+          }
+        },
+        {
+          "code": "ContentsCode",
+          "selection": {
+            "filter": "item",
+            "values": [
+              "AA0003AT"
+            ]
+          }
+        },
+        {
+          "code": "Tid",
+          "selection": {
+            "filter": "item",
+            "values": [
+              "2012"
+            ]
+          }
+        }
+      ],
+      "response": {
+        "format": "json"
+      }
+    }
+  ).then(function(response) {
+    $rootScope.showLoading(false);
+
+    var data = response.data.data;
+    var series = _.map(_.flatten(_.pluck(data, "values")), function(n) {
+      return parseFloat(n, 10);
+    });
+
+    $scope.labels = _.map(data, function(d) {
+      return d.key[2];
+    });
+    $scope.data = [
+      series
+    ];
+  });
+
+  $scope.labels = ["TOT", "SE", "NEXS", "EUEESXN", "VXEUEES"];
   $scope.data = [
-    [65, 59, 80, 81, 56, 55, 40],
-    [28, 48, 40, 19, 86, 27, 90]
+    [65, 59, 80, 81, 56]
   ];
-  $scope.onClick = function (points, evt) {
-    $log.log(points, evt);
-  };
+  
+  $scope.$watch("labels", function(v) {
+    $log.log("labels:", v);
+  }, true);
+  $scope.$watch("data", function(v) {
+    $log.log("data:", v);
+  }, true);
+  window.scope = $scope;
 });
