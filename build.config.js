@@ -35,8 +35,7 @@ module.exports = {
       'git_modules/ng-commons/dist/assets/ng-commons-0.0.0.js'
     ],
     css: [
-      'bower_components/normalize.css/normalize.css',
-      'src/assets/jquery-ui.min.css'
+      'bower_components/bootstrap/dist/css/bootstrap.min.css'
     ],
     assets: [
       'git_modules/*/src/assets/**/*.*'
