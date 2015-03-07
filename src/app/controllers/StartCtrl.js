@@ -2,7 +2,7 @@
 
 angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScope, $log, $http, $timeout) {
   $rootScope.showLoading(true);
-  $http.post("http://localhost:9000/proxy?target=http://api.scb.se/OV0104/v1/doris/sv/ssd/START/AA/AA0003/AA0003B/IntGr1RikKON",
+  $http.post("/proxy?target=http://api.scb.se/OV0104/v1/doris/sv/ssd/START/AA/AA0003/AA0003B/IntGr1RikKON",
     {
       "query": [
         {

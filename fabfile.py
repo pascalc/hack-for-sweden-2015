@@ -8,13 +8,13 @@ import subprocess
 env.use_ssh_config = True
 
 env.hosts = [
-  "88.80.174.192"
+  "pspace.se"
 ]
 
 settings = {
-  "88.80.174.192": {
-    "web_home": "/var/www/html/hack4sweden",
-    "user": "pascal",
+  "pspace.se": {
+    "web_home": "/srv/hack4sweden",
+    "user": "root",
     "profile": None
   }
 }
