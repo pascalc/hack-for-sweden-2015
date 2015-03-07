@@ -58,22 +58,19 @@ angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScop
       return parseFloat(n, 10);
     });
 
-    $scope.labels = _.map(data, function(d) {
+    var labels = _.map(data, function(d) {
       return d.key[2];
     });
-    $scope.data = [
-      series
-    ];
+    $scope.data = {
+      labels: labels,
+      datasets: [
+        {
+          data: series
+        }
+      ]
+    };
   });
 
-  $scope.labels = ["TOT", "SE", "NEXS", "EUEESXN", "VXEUEES"];
-  $scope.data = [
-    [65, 59, 80, 81, 56]
-  ];
-  
-  $scope.$watch("labels", function(v) {
-    $log.log("labels:", v);
-  }, true);
   $scope.$watch("data", function(v) {
     $log.log("data:", v);
   }, true);

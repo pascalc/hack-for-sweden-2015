@@ -8,7 +8,7 @@ angular.module('hack4sweden', [
     'ngCookies',
     'hack4sweden.constant',
     'se.sll.hsf.ng-commons',
-    'chart.js'
+    'tc.chartjs'
   ]).config(function ($routeProvider, $locationProvider, settings, translationsProvider, $logProvider, $httpProvider) {
     settings.translationModules.forEach(function (translationModule) {
       translationsProvider.register(translationModule);

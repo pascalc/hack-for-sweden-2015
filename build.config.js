@@ -33,7 +33,7 @@ module.exports = {
       'bower_components/underscore/underscore.js',
       'bower_components/momentjs/min/moment-with-langs.min.js',
       'bower_components/Chart.js/Chart.min.js',
-      'bower_components/angular-chart.js/dist/angular-chart.min.js',
+      'bower_components/tc-angular-chartjs/dist/tc-angular-chartjs.min.js',
       'git_modules/ng-commons/dist/assets/ng-commons-0.0.0.js'
     ],
     css: [
