@@ -282,7 +282,14 @@ module.exports = function (grunt) {
 
     connect: {
       server: {
-        proxies: privateConfig.proxies,
+        proxies: [{
+          "context": "/proxy",
+          "host": "proxy.pspace.se",
+          "changeOrigin": true,
+          "rewrite": {
+              "^/proxy/": "/proxy"
+          }
+        }],
         options: {
           port: 9000,
           hostname: '0.0.0.0',
