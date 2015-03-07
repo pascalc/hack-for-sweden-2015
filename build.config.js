@@ -37,7 +37,8 @@ module.exports = {
       'git_modules/ng-commons/dist/assets/ng-commons-0.0.0.js'
     ],
     css: [
-      'bower_components/bootstrap/dist/css/bootstrap.min.css'
+      'bower_components/bootstrap/dist/css/bootstrap.min.css',
+      'bower_components/angular-chart.js/dist/angular-chart.css'
     ],
     assets: [
       'git_modules/*/src/assets/**/*.*'
