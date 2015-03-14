@@ -8,8 +8,8 @@
   </div>
 
   <ul class="conditions">
-    <li><span class="dot"></span> {{data.villkor.arbetstid}}</li>
-    <li><span class="dot"></span> {{data.villkor.varaktighet}}</li>
-    <li><span class="dot"></span> {{data.villkor.lonetyp}}</li>
+    <li><span class="dot" ng-style="styleDot('arbetstid', data.villkor.arbetstid)"></span> {{data.villkor.arbetstid}}</li>
+    <li><span class="dot" ng-style="styleDot('varaktighet', data.villkor.varaktighet)"></span> {{data.villkor.varaktighet}}</li>
+    <li><span class="dot" ng-style="styleDot('lonetyp', data.villkor.lonetyp)"></span> {{data.villkor.lonetyp}}</li>
   </ul>
 </div>

@@ -1,3 +1,5 @@
+/* global _ */
+
 angular.module('hack4sweden')
 
 .directive('jobCard', function() {
@@ -15,7 +17,7 @@ angular.module('hack4sweden')
   };
 })
 
-.controller('jobCardCtrl', function($scope, JobResource, $log) {
+.controller('jobCardCtrl', function($scope, JobResource, $log, DotStyleService) {
   $scope.state = {
     showLoading: false
   };
@@ -26,4 +28,12 @@ angular.module('hack4sweden')
     $scope.data = response.data.platsannons;
     $log.log(response.data);
   });
+
+  $scope.styleDot = function(key, value) {
+    if (_.has(DotStyleService, key)) {
+      return DotStyleService[key](value);
+    } else {
+      return {};
+    }
+  };
 });
