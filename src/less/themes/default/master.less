@@ -2,14 +2,17 @@ html, body {
   height: 100%;
   width: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
   background-color: #F7F6F6;
 
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
+@footer-height: 42px;
 .my-container {
   min-height: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 20px + @footer-height;
+  overflow-x: hidden;
 }
 
 form {
@@ -158,6 +161,7 @@ select.form--select {
   padding-top: 83px;
   width: 95%;
   margin: auto;
+  overflow-x: hidden;
 
   .instructions {
     font-size: 28px;
@@ -240,4 +244,18 @@ select.form--select {
   width: 10px;
   border-radius: 50%;
   background-color: white;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  bottom: 0px;
+  left: 20px;
+  background-color: #F7F6F6;
+  height: @footer-height;
+  p {
+    margin-bottom: 0px;
+  }
 }
