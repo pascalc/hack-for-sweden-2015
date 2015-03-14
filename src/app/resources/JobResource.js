@@ -8,7 +8,7 @@ angular.module('hack4sweden').factory("JobResource", function($http, $log) {
   };
 
   var get = function(id) {
-
+    return $http.get("/rest/platsannons/" + id);
   };
 
   return {
