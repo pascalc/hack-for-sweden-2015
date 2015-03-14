@@ -1,5 +1,5 @@
 <div class="job-card">
-  <span class="company-name">{{initialData.arbetsplatsnamn}}</span>
+  <span class="company-name">{{initialData.arbetsplatsnamn | limitStr:40:'...'}}</span>
   <h2>{{initialData.annonsrubrik}}</h2>
 
   <div class="inner-loading-indicator" ng-show="state.showLoading"></div>
