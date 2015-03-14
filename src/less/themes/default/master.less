@@ -249,13 +249,21 @@ select.form--select {
 .footer {
   width: 100%;
   position: absolute;
+  .footer-container {
+    width: 100%;
+    overflow: auto;
+  }
   padding-bottom: 10px;
   padding-top: 10px;
   bottom: 0px;
-  left: 20px;
+  padding-left: 20px;
   background-color: #F7F6F6;
   height: @footer-height;
-  p {
-    margin-bottom: 0px;
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+    margin-right: 20px;
   }
 }
