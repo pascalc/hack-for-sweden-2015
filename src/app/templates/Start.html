@@ -2,14 +2,18 @@
   <div class="top-bar">
       Jag vill jobba med 
       <form class="form-inline" ng-submit="search()">
-        <input type="text" ng-model="state.searchTerm"> i 
+        <input type="text" autofocus ng-model="state.searchTerm"> i 
         <select>
           <option>Stockholms län</option>
         </select>
-        <button type="submit" class="btn btn-primary">Sök</button>
+        <button type="submit" class="btn btn-primary" style="margin-left: 40px">
+          <i class="fa fa-search"></i> Sök
+        </button>
       </form> 
   </div>
   <div class="job-cards">
     <div ng-repeat="card in state.data" job-card initial-data="card"></div>
+    <p class="instructions" ng-if="!state.searched && state.data.length == 0">Använd sökfältet!</p>
+    <p class="instructions" ng-if="state.searched && !state.data">Inga annonser hittades.</p>
   </div>
 </div>

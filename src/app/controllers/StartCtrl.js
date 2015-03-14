@@ -7,6 +7,7 @@ angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScop
   };
   
   $scope.search = function() {
+    $scope.state.searched = true;
     $rootScope.showLoading(true);
     JobResource.getList($scope.state.searchTerm, "1").then(function(response) {
       $rootScope.showLoading(false);
