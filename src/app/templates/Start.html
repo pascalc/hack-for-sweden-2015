@@ -1,11 +1,13 @@
 <div class="my-container">
   <div class="top-bar">
-    <p>
-      Jag vill jobba med <input type="text" ng-model="state.searchTerm"> i 
-      <select>
-        <option>Stockholms län</option>
-      </select>
-    </p>
+      Jag vill jobba med 
+      <form class="form-inline" ng-submit="search()">
+        <input type="text" ng-model="state.searchTerm"> i 
+        <select>
+          <option>Stockholms län</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Sök</button>
+      </form> 
   </div>
   <div class="job-cards">
     <div ng-repeat="card in state.data" job-card initial-data="card"></div>
