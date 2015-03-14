@@ -12,9 +12,10 @@ html, body {
   padding-bottom: 20px;
 }
 
+@navbar-height: 83px;
 .top-bar {
   background-color: white;
-  height: 83px;
+  height: @navbar-height;
   position: fixed;
   top: 0;
   left: 0;
@@ -24,6 +25,29 @@ html, body {
   font-size: 26px;
   text-align: center;
   border-bottom: solid 5px rgb(199, 199, 199);
+  z-index: 99;
+}
+
+.loading-indicator {
+  position: absolute;
+  top: 83px;
+  left: 0;
+  width: 100%;
+  height: ~"calc(100% - @{navbar-height})";
+  background-image: url('images/ajax-loader.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.inner-loading-indicator {
+  height: 100%;
+  position: absolute;
+  top: 7%;
+  left: 0;
+  width: 100%;
+  background-image: url('images/ajax-loader.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .job-cards {
@@ -34,6 +58,7 @@ html, body {
 }
 
 .job-card {
+  position: relative;
   background-color: white;
   display: inline-block;
   height: 250px;
@@ -50,6 +75,7 @@ html, body {
     font-size: 18px;
     font-weight: 700;
     margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   .company-name {
