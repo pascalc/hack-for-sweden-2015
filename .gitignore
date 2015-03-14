@@ -21,3 +21,4 @@ test-results.xml
 
 web-driver-conf.private.json
 *.pyc
+arbetsformedlingen_contact.txt
