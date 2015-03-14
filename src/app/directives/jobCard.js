@@ -1,4 +1,4 @@
-/* global _ */
+/* global _, moment */
 
 angular.module('hack4sweden')
 
@@ -35,5 +35,9 @@ angular.module('hack4sweden')
     } else {
       return {};
     }
+  };
+
+  $scope.urgentApplyDate = function(date) {
+    return moment(date, 'YYYY-MM-DDTHH:mm:ss+Z').diff(moment(), 'days') <= 7;
   };
 });
