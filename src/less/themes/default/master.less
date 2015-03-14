@@ -36,7 +36,9 @@ form {
     padding-right: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    border: solid 1px rgb(199, 199, 199);
+    /*border: solid 1px rgb(199, 199, 199);*/
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
 
     /*border-radius: 5px;*/
     /*border: 1px solid transparent;
@@ -44,6 +46,74 @@ form {
     /*border-bottom: 1px solid #DDD;*/
     /*box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;*/
   }
+}
+
+.select--wrapper {
+  width: 300px;
+  max-width: 41.429em;
+  position: relative;
+  background: #ffffff;
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.select--wrapper:after {
+  background-image: url('../assets/images/sprite/icons.png?544db4fbbb');
+  background-repeat: no-repeat;
+  -webkit-background-size: 172px 122px;
+  -moz-background-size: 172px 122px;
+  background-size: 172px 122px;
+  background-position: -80px -82px;
+  width: 10px;
+  height: 14px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -7px;
+  display: block;
+  content: "";
+  z-index: 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1), screen and (min--moz-device-pixel-ratio: 1), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1), screen and (min-resolution: 1dppx) {
+  .select--wrapper:after {
+    background-image: url('../assets/images/sprite/icons.png?544db4fbbb');
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min--moz-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 200/100), screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+  .select--wrapper:after {
+    background-image: url('../assets/images/sprite/icons@2x.png?544db4fbbb');
+  }
+}
+select.form--select {
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-appearance: none;
+  box-shadow: none;
+  outline-width: 1px;
+  outline-offset: -3px;
+  outline-color: #a0a0a0;
+  background: #ffffff;
+  border: 1px solid #bbbbbb;
+  padding: 5px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+  z-index: 10;
+  background: transparent;
+  display: inline-block;
+  width: 300px;
+}
+
+.search-button {
+  margin-left: 20px;
+  position: relative;
+  bottom: 3px;
 }
 
 .loading-indicator {

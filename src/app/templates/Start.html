@@ -3,10 +3,12 @@
       Jag vill jobba med 
       <form class="form-inline" ng-submit="search()">
         <input type="text" autofocus ng-model="state.searchTerm"> i 
-        <select>
-          <option>Stockholms län</option>
-        </select>
-        <button type="submit" class="btn btn-primary" style="margin-left: 40px">
+        <span class="select--wrapper">
+          <select class="form--select">
+            <option>Stockholms län</option>
+          </select>
+        </span>
+        <button type="submit" class="btn btn-primary search-button">
           <i class="fa fa-search"></i> Sök
         </button>
       </form> 
