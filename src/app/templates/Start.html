@@ -13,7 +13,7 @@
   </div>
   <div class="job-cards">
     <div ng-repeat="card in state.data" job-card initial-data="card"></div>
-    <p class="instructions" ng-if="!state.searched && state.data.length == 0">Använd sökfältet!</p>
+    <p class="instructions" ng-if="!state.searched && state.data.length == 0">Vad vill du jobba med?</p>
     <p class="instructions" ng-if="state.searched && !state.data">Inga annonser hittades.</p>
   </div>
 </div>
