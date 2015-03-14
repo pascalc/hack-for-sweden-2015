@@ -29,6 +29,10 @@ angular.module('hack4sweden', [
      $locationProvider.hashPrefix('!'); */
   })
 
+  .config(function($httpProvider) {
+    $httpProvider.defaults.headers.common['Accept-Language'] = 'en-gb';
+  })
+
   .run(function($rootScope, $location) {
     
   });

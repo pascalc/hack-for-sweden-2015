@@ -282,14 +282,24 @@ module.exports = function (grunt) {
 
     connect: {
       server: {
-        proxies: [{
-          "context": "/proxy",
-          "host": "proxy.pspace.se",
-          "changeOrigin": true,
-          "rewrite": {
-              "^/proxy/": "/proxy"
+        proxies: [
+          // {
+          //   "context": "/proxy",
+          //   "host": "proxy.pspace.se",
+          //   "changeOrigin": true,
+          //   "rewrite": {
+          //       "^/proxy/": "/proxy"
+          //   }
+          // }
+          {
+            "context": "/rest",
+            "host": "api.arbetsformedlingen.se",
+            "changeOrigin": true,
+            "rewrite": {
+                "^/rest/": "/"
+            }
           }
-        }],
+        ],
         options: {
           port: 9000,
           hostname: '0.0.0.0',
