@@ -4,8 +4,7 @@
       <form class="form-inline" ng-submit="search()">
         <input type="text" autofocus ng-model="state.searchTerm"> i 
         <span class="select--wrapper">
-          <select class="form--select">
-            <option>Stockholms län</option>
+          <select class="form--select" ng-model="state.countyCode" ng-options="opt.id as opt.namn for opt in counties">
           </select>
           <span class="dropdown-icon"></span>
         </span>

@@ -48,8 +48,9 @@ form {
   }
 }
 
+@select-width: 320px;
 .select--wrapper {
-  width: 300px;
+  width: @select-width;
   max-width: 41.429em;
   position: relative;
   background: #ffffff;
@@ -107,7 +108,7 @@ select.form--select {
   z-index: 10;
   background: transparent;
   display: inline-block;
-  width: 300px;
+  width: @select-width;
 }
 .dropdown-icon {
   display: inline-block;

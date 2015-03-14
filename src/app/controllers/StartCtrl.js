@@ -1,15 +1,18 @@
 /* global _ */
 
-angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScope, $log, JobResource) {
+angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScope, $log, JobResource, settings) {
   $scope.state = {
     searchTerm: "",
+    countyCode: 1,
     data: []
   };
+
+  $scope.counties = settings.countyCodes;
   
   $scope.search = function() {
     $scope.state.searched = true;
     $rootScope.showLoading(true);
-    JobResource.getList($scope.state.searchTerm, "1").then(function(response) {
+    JobResource.getList($scope.state.searchTerm, $scope.state.countyCode).then(function(response) {
       $rootScope.showLoading(false);
       $scope.state.data = response.data.matchningslista.matchningdata;
     });

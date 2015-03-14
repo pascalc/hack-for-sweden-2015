@@ -1,3 +1,93 @@
 {
-  "translationModules": ["se.sll.hsf.ng-commons.translations", "hack4sweden.translations"]
+  "translationModules": ["se.sll.hsf.ng-commons.translations", "hack4sweden.translations"],
+  "countyCodes": [
+    {
+        "id": 10,
+        "namn": "Blekinge län"
+    },
+    {
+        "id": 20,
+        "namn": "Dalarnas län"
+    },
+    {
+        "id": 9,
+        "namn": "Gotlands län"
+    },
+    {
+        "id": 21,
+        "namn": "Gävleborgs län"
+    },
+    {
+        "id": 13,
+        "namn": "Hallands län"
+    },
+    {
+        "id": 23,
+        "namn": "Jämtlands län"
+    },
+    {
+        "id": 6,
+        "namn": "Jönköpings län"
+    },
+    {
+        "id": 8,
+        "namn": "Kalmar län"
+    },
+    {
+        "id": 7,
+        "namn": "Kronobergs län"
+    },
+    {
+        "id": 25,
+        "namn": "Norrbottens län"
+    },
+    {
+        "id": 12,
+        "namn": "Skåne län"
+    },
+    {
+        "id": 1,
+        "namn": "Stockholms län"
+    },
+    {
+        "id": 4,
+        "namn": "Södermanlands län"
+    },
+    {
+        "id": 3,
+        "namn": "Uppsala län"
+    },
+    {
+        "id": 17,
+        "namn": "Värmlands län"
+    },
+    {
+        "id": 24,
+        "namn": "Västerbottens län"
+    },
+    {
+        "id": 22,
+        "namn": "Västernorrlands län"
+    },
+    {
+        "id": 19,
+        "namn": "Västmanlands län"
+    },
+    {
+        "id": 14,
+        "namn": "Västra Götalands län"
+    },
+    {
+        "id": 18,
+        "namn": "Örebro län"
+    },
+    {
+        "id": 5,
+        "namn": "Östergötlands län"
+    },
+    {
+        "id": 90,
+        "namn": "Ospecificerad arbetsort"
+    }
+  ]
 }
