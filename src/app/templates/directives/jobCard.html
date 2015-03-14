@@ -12,4 +12,13 @@
     <li><span class="dot" ng-style="styleDot('varaktighet', data.villkor.varaktighet)"></span> {{data.villkor.varaktighet}}</li>
     <li><span class="dot" ng-style="styleDot('lonetyp', data.villkor.lonetyp)"></span> {{data.villkor.lonetyp}}</li>
   </ul>
+
+  <div class="links">
+    <p>
+      <a ng-href="{{data.annons.platsannonsUrl}}" target="_blank">Annons på Arbetsförmedlingen</a>
+    </p>
+    <p style="margin-top: 5px">
+      <a ng-href="{{data.arbetsplats.hemsida}}" target="_blank">Läs mer om {{initialData.arbetsplatsnamn | limitStr:20:'...'}}</a>
+    </p>
+  </div>
 </div>
