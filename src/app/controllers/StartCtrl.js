@@ -1,4 +1,4 @@
-/* global _ */
+/* global _, window */
 
 angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScope, $log, JobResource, settings) {
   $scope.state = {
@@ -10,6 +10,9 @@ angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScop
   $scope.counties = settings.countyCodes;
   
   $scope.search = function() {
+    $scope.state.data = [];
+    window.scrollTo(0,0);
+
     $scope.state.searched = true;
     $rootScope.showLoading(true);
     JobResource.getList($scope.state.searchTerm, $scope.state.countyCode).then(function(response) {
