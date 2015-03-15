@@ -20,6 +20,7 @@ form {
 }
 
 @navbar-height: 79px;
+
 .top-bar {
   background-color: white;
   height: @navbar-height;
@@ -30,6 +31,11 @@ form {
   padding: 20px;
   font-family: 'Lato';
   font-size: 20px;
+
+  @media only screen and (max-width : 816px) { 
+    position: relative;
+    height: auto;
+  }; 
 
   text-align: center;
   border-bottom: solid 5px rgb(199, 199, 199);
@@ -65,6 +71,9 @@ form {
 .select--wrapper {
   width: @select-width;
   max-width: 41.429em;
+  @media only screen and (max-width : 1024px) { 
+    width: 200px;
+  }; 
   position: relative;
   background: #ffffff;
   display: inline-block;
@@ -122,6 +131,9 @@ select.form--select {
   background: transparent;
   display: inline-block;
   width: @select-width;
+  @media only screen and (max-width : 1024px) { 
+    width: 200px;
+  }; 
 }
 .dropdown-icon {
   display: inline-block;
@@ -139,11 +151,17 @@ select.form--select {
   margin-left: 20px;
   position: relative;
   bottom: 3px;
+
+  @media only screen and (max-width : 560px) { 
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  };
 }
 
 .loading-indicator {
   position: absolute;
-  top: 83px;
+  top: @navbar-height;
   left: 0;
   width: 100%;
   height: ~"calc(100% - @{navbar-height})";
@@ -167,7 +185,11 @@ select.form--select {
 
 .job-cards {
   height: 100%;
-  padding-top: 83px;
+  padding-top: @navbar-height;
+  @media only screen and (max-width : 816px) { 
+    padding-top: 0px;
+  }; 
+
   width: 95%;
   margin: auto;
   overflow-x: hidden;
