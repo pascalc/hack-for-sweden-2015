@@ -30,9 +30,14 @@ form {
   padding: 20px;
   font-family: 'Lato';
   font-size: 20px;
+
   text-align: center;
   border-bottom: solid 5px rgb(199, 199, 199);
   z-index: 99;
+
+  @media only screen and (max-width : 1024px) { 
+    font-size: 16px;
+  }; 
 
   input[type='text'] {
     padding-left: 5px;
@@ -43,6 +48,10 @@ form {
     border: 1px solid #bbbbbb;
     border-radius: 3px;
     width: 400px;
+
+    @media only screen and (max-width : 1024px) { 
+      width: 200px;
+    }; 
 
     /*border-radius: 5px;*/
     /*border: 1px solid transparent;
@@ -163,6 +172,14 @@ select.form--select {
   margin: auto;
   overflow-x: hidden;
 
+  @media only screen and (max-width : 1850px) { 
+    width: 1166px; 
+  }; 
+
+  @media only screen and (max-width : 1160px) { 
+    width: 587px
+  }; 
+
   .instructions {
     font-size: 22px;
     font-style: italic;
@@ -253,6 +270,7 @@ select.form--select {
     width: 100%;
     overflow: auto;
   }
+
   padding-bottom: 10px;
   padding-top: 10px;
   bottom: 0px;
@@ -265,5 +283,10 @@ select.form--select {
   .right {
     float: right;
     margin-right: 20px;
+    @media only screen and (max-width : 1024px) { 
+      font-size: 8px;
+      position: relative;
+      bottom: 20px;
+    }; 
   }
 }
