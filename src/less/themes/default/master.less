@@ -35,6 +35,11 @@ form {
   font-family: 'Lato';
   font-size: 20px;
 
+  @media only screen and (max-width : 816px) { 
+    position: relative;
+    height: auto;
+  }; 
+
   text-align: center;
   border-bottom: solid 5px rgb(199, 199, 199);
   z-index: 99;
@@ -69,6 +74,9 @@ form {
 .select--wrapper {
   width: @select-width;
   max-width: 41.429em;
+  @media only screen and (max-width : 1024px) { 
+    width: 200px;
+  }; 
   position: relative;
   background: #ffffff;
   display: inline-block;
@@ -126,6 +134,9 @@ select.form--select {
   background: transparent;
   display: inline-block;
   width: @select-width;
+  @media only screen and (max-width : 1024px) { 
+    width: 200px;
+  }; 
 }
 .dropdown-icon {
   display: inline-block;
@@ -143,11 +154,17 @@ select.form--select {
   margin-left: 20px;
   position: relative;
   bottom: 3px;
+
+  @media only screen and (max-width : 560px) { 
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  };
 }
 
 .loading-indicator {
   position: absolute;
-  top: 83px;
+  top: 60px;
   left: 0;
   width: 100%;
   height: ~"calc(100% - @{navbar-height})";
