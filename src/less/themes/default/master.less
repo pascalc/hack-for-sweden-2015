@@ -1,3 +1,7 @@
+@navbar-height: 79px;
+@footer-height: 42px;
+
+
 html, body {
   height: 100%;
   width: 100%;
@@ -8,10 +12,11 @@ html, body {
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
-@footer-height: 42px;
 .my-container {
+  position: relative;
   min-height: 100%;
-  padding-bottom: 20px + @footer-height;
+  height: 100%;
+  /*padding-bottom: 20px + @footer-height;*/
   overflow-x: hidden;
 }
 
@@ -19,11 +24,10 @@ form {
   display: inline-block;
 }
 
-@navbar-height: 79px;
 .top-bar {
   background-color: white;
+  position: absolute;
   height: @navbar-height;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -166,19 +170,21 @@ select.form--select {
 }
 
 .job-cards {
-  height: 100%;
-  padding-top: 83px;
-  width: 95%;
+  position: absolute;
+  top: @navbar-height;
+  bottom: @footer-height;
+  width: 100%;
   margin: auto;
+  padding-top: 20px;
   overflow-x: hidden;
 
-  @media only screen and (max-width : 1850px) { 
+  /*@media only screen and (max-width : 1850px) { 
     width: 1166px; 
   }; 
 
   @media only screen and (max-width : 1160px) { 
     width: 587px
-  }; 
+  };*/
 
   .instructions {
     font-size: 22px;
@@ -189,16 +195,25 @@ select.form--select {
   }
 }
 
+.job-cards-row {
+  text-align: center;
+}
+
 .job-card {
   position: relative;
   background-color: white;
+  text-align: left;
   display: inline-block;
+  float: none;
   height: 250px;
   width: 500px;
-  margin: 40px;
+  margin-top: 0px;
+  margin-right: 20px;
   margin-bottom: 20px;
+  margin-left: 20px;
   padding: 20px;
   overflow: hidden;
+
 
   h1, h2 {
     margin-top: 0px;
