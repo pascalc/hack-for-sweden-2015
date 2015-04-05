@@ -14,6 +14,8 @@ angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScop
   
   $scope.search = function() {
     $scope.state.data = [];
+    $scope.state.currentPage = 0;
+    $scope.state.allJobsFetched = false;
     window.scrollTo(0,0);
 
     $scope.state.searched = true;
