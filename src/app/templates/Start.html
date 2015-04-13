@@ -1,5 +1,5 @@
 <div modal show-modal="state.showModal">
-  <div job-details job-data="jobData"></div>
+  <div job-details job-data="state.selectedJobData"></div>
 </div>
 <div class="my-container">
   <div class="top-bar">
@@ -19,7 +19,7 @@
 
   <div class="job-cards" when-scrolled-bottom="getNextJobs()">
     <div class="job-cards-row">
-      <div ng-repeat="card in state.data" job-card initial-data="card" ng-click="state.showModal = true"></div>
+      <div ng-repeat="card in state.data" job-card initial-data="card" job-data="card.loadedData" ng-click="state.selectedJobData = card.loadedData; state.showModal = true"></div>
     </div>
     <div ng-show="state.currentPage > 0 && !state.fetchingJobs && !state.allJobsFetched" class="text-center">
       <a href ng-click="getNextJobs()">Visa fler jobb</a>

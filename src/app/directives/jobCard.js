@@ -9,7 +9,8 @@ angular.module('hack4sweden')
     controller: 'jobCardCtrl',
     replace: true,
     scope: {
-      initialData: '='
+      initialData: '=',
+      jobData: '='
     },
     link: function(scope, elem, attrs) {
       scope.element = elem;
@@ -25,6 +26,7 @@ angular.module('hack4sweden')
   $scope.state.showLoading = true;
   JobResource.get($scope.initialData.annonsid).then(function(response) {
     $scope.state.showLoading = false;
+    $scope.jobData = angular.copy(response.data);
     $scope.data = response.data.platsannons;
     $log.log(response.data);
   });
