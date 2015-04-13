@@ -1,5 +1,5 @@
-<div class="my-modal">
-  <div class="modal-overlay"></div>
+<div class="my-modal" ng-show="showModal">
+  <div class="modal-overlay" ng-click="showModal = false"></div>
   <div class="modal-container">
     <div ng-transclude></div>
   </div>

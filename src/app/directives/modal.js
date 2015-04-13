@@ -9,7 +9,9 @@ angular.module('hack4sweden')
     controller: 'modalCtrl',
     replace: true,
     transclude: true,
-    scope: {},
+    scope: {
+      showModal: '='
+    },
     link: function(scope, elem, attrs) {
       scope.element = elem;
     }
