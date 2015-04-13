@@ -1,6 +1,7 @@
 <div class="my-modal" ng-show="showModal">
   <div class="modal-overlay" ng-click="showModal = false"></div>
   <div class="modal-container">
+    <i class="fa fa-times" ng-click="showModal = false"></i>
     <div ng-transclude></div>
   </div>
 </div>
