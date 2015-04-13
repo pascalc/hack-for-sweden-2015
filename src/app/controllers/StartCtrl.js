@@ -2,7 +2,7 @@
 
 angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScope, $log, JobResource, settings) {
   $scope.state = {
-    searchTerm: "",
+    searchTerm: "cafe", // DEBUG
     countyCode: 1,
     data: [],
     showModal: false,
@@ -45,6 +45,9 @@ angular.module('hack4sweden').controller("StartCtrl", function($scope, $rootScop
       $scope.state.fetchingJobs = false;
     });
   };
+
+  // DEBUG
+  $scope.search();
 
   window.scope = $scope;
 });
